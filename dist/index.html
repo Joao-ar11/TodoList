@@ -31,7 +31,7 @@
                     <div class="todo">
                         <button class="check unchecked" type="button"></button>
                         <p class="todo-name">Default</p>
-                        <div class="priority-container">Priority: <div class="priority low"></div></div>
+                        <div class="priority-container">Priority: <div class="priority low" aria-label="low"></div></div>
                         <p class="date">06/02/2023</p>
                         <button class="todo-delete">X</button>
                         <div class="description">
@@ -48,7 +48,7 @@
                     <div class="todo">
                         <button class="check checked" type="button">&check;</button>
                         <p class="todo-name">Default</p>
-                        <div class="priority-container">Priority: <div class="priority medium"></div></div>
+                        <div class="priority-container">Priority: <div class="priority medium" aria-label="medium"></div></div>
                         <p class="date">06/02/2023</p>
                         <button class="todo-delete">X</button>
                     </div>
@@ -57,13 +57,59 @@
                     <div class="todo">
                         <button class="check checked" type="button">&check;</button>
                         <p class="todo-name">Default</p>
-                        <div class="priority-container">Priority: <div class="priority high"></div>
+                        <div class="priority-container">Priority: <div class="priority high" aria-label="high"></div>
                         </div>
                         <p class="date">06/02/2023</p>
                         <button class="todo-delete">X</button>
                     </div>
                 </li>
             </ul>
+        </div>
+        <div class="modal-container">
+            <form class="modal form-project" action="#">
+                <h2>New Project</h2>
+                <div class="field">
+                    <label for="project-name">Project Name: </label>
+                    <input type="text" id="project-name" name="project-name" maxlength="16">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="confirm">Confirm</button>
+                    <button type="button" class="cancel">Cancel</button>
+                </div>
+            </form>
+            <form action="#" class="modal form-todo">
+                <h2>New Todo</h2>
+                <div class="field">
+                    <label for="todo-name">Todo Name:</label>
+                    <input type="text" id="todo-name" maxlength="45">
+                </div>
+                <div class="field">
+                    <label for="todo-description">Todo Description:</label>
+                    <textarea name="todo-description" id="todo-description" rows="3" maxlength="135"></textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="todo-date">Todo Due Date:</label>
+                        <input type="date" id="todo-date" name="todo-date">
+                    </div>
+                    <div class="field">
+                        <label for="todo-priority">Priority:</label>
+                        <select name="todo-priority" id="todo-priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">high</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="todo-notes">Notes:</label>
+                    <textarea name="todo-notes" id="todo-notes" maxlength="85"></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="confirm">Confirm</button>
+                    <button type="button" class="cancel">Cancel</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>

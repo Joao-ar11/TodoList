@@ -19,6 +19,7 @@ html, body {
 }
 
 .container {
+    position: relative;
     height: 100%;
     display: grid;
     grid-template: 76px 1fr / 250px 1fr;
@@ -232,4 +233,115 @@ hr {
 
 .notes {
     grid-column: 3 / 6;
+}
+
+
+.modal-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    padding: 20px;
+    background-color: #007fbf;
+    color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-project {
+    display: none;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.field input[type="text"] {
+    padding: 0 5px;
+    height: 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-project input {
+    width: 300px;
+}
+
+.form-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-buttons button{
+    cursor: pointer;
+    height: 1.5rem;
+    width: 144px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.confirm {
+    background-color: lightgreen;
+}
+
+.confirm:hover {
+    background-color: rgb(112, 211, 112);
+}
+
+.cancel {
+    background-color: rgb(233, 95, 95);
+}
+
+.cancel:hover {
+    background-color: rgb(204, 72, 72);
+}
+
+.form-todo {
+    display: none;
+}
+
+.form-todo input[type="text"] {
+    width: 500px;
+}
+
+textarea {
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    resize: none
+}
+
+.field-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field-group .field {
+    width: 45%;
+}
+
+#todo-date, select {
+    height: 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
 }
