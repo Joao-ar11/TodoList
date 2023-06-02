@@ -15,9 +15,55 @@
         <div class="sidebar">
             <h2>Projects:</h2>
             <ul class="project-list">
+                <li class="project selected">Default<button class="project-delete">X</button></li>
+                <li class="project">Default2<button class="project-delete">X</button></li>
             </ul>
-            <button class="new-project button-project" type="button">+ New Project</button>
-            <button class="delete-project button-project" type="button">- Delete Project</button>
+            <button class="new-project" type="button">+ New Project</button>
+        </div>
+        <div class="current-project">
+            <div class="project-info">
+                <h2 class="current-project-name">Default</h2>
+                <button type="button" class="add-todo">+ Add Todo</button>
+            </div>
+            <hr>
+            <ul class="todo-list">
+                <li>
+                    <div class="todo">
+                        <button class="check unchecked" type="button"></button>
+                        <p class="todo-name">Default</p>
+                        <div class="priority-container">Priority: <div class="priority low"></div></div>
+                        <p class="date">06/02/2023</p>
+                        <button class="todo-delete">X</button>
+                        <div class="description">
+                            <p>Description:</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde eius totam architecto ex quas vitae animi nam, omnis eum vero cum libero earum laudantium exercitationem temporibus consectetur nobis. Laudantium, totam.</p>
+                        </div>
+                        <div class="notes">
+                            <p>Notes:</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam alias tempora modi!</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="todo">
+                        <button class="check checked" type="button">&check;</button>
+                        <p class="todo-name">Default</p>
+                        <div class="priority-container">Priority: <div class="priority medium"></div></div>
+                        <p class="date">06/02/2023</p>
+                        <button class="todo-delete">X</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="todo">
+                        <button class="check checked" type="button">&check;</button>
+                        <p class="todo-name">Default</p>
+                        <div class="priority-container">Priority: <div class="priority high"></div>
+                        </div>
+                        <p class="date">06/02/2023</p>
+                        <button class="todo-delete">X</button>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </body>
