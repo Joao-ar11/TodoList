@@ -1,14 +1,10 @@
 const Todo = (() => {
   const _projects = {
-    default: {
-      description: 'Default Project',
-      todos: [],
-    },
+    default: [],
   };
 
-  function createProject(name, description) {
+  function createProject(name) {
     _projects[name] = {
-      description,
       todos: [],
     };
   }
@@ -34,20 +30,20 @@ const Todo = (() => {
 
   function addTodo(project, name, description, dueDate, priority, notes) {
     const todo = _createTodo(name, description, dueDate, priority, notes);
-    _projects[project].todos.push(todo);
+    _projects[project].push(todo);
   }
 
   function getTodos(project) {
-    return _projects[project].todos;
+    return _projects[project];
   }
 
   function checkTodo(project, index) {
-    const todo = _projects[project].todos[index];
+    const todo = _projects[project][index];
     todo.check = !todo.check;
   }
 
   function deleteTodo(project, index) {
-    _projects[project].todos.splice(index, 1);
+    _projects[project].splice(index, 1);
   }
 
   return {
