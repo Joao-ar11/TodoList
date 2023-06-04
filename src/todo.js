@@ -4,9 +4,7 @@ const Todo = (() => {
   };
 
   function createProject(name) {
-    _projects[name] = {
-      todos: [],
-    };
+    _projects[name] = [];
   }
 
   function getProjectNames() {

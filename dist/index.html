@@ -15,8 +15,8 @@
         <div class="sidebar">
             <h2>Projects:</h2>
             <ul class="project-list">
-                <li class="project selected">Default<button class="project-delete">X</button></li>
-                <li class="project">Default2<button class="project-delete">X</button></li>
+                <li class="project selected"><p>Default</p><button class="project-delete">X</button></li>
+                <li class="project"><p>Default2</p><button class="project-delete">X</button></li>
             </ul>
             <button class="new-project" type="button">+ New Project</button>
         </div>
@@ -72,6 +72,7 @@
                     <label for="project-name">Project Name: </label>
                     <input type="text" id="project-name" name="project-name" maxlength="16">
                 </div>
+                <p class="error">Error! Name already in use</p>
                 <div class="form-buttons">
                     <button type="submit" class="confirm">Confirm</button>
                     <button type="button" class="cancel">Cancel</button>
@@ -83,6 +84,7 @@
                     <label for="todo-name">Todo Name:</label>
                     <input type="text" id="todo-name" maxlength="45">
                 </div>
+                <p class="error">Error! Name already in use</p>
                 <div class="field">
                     <label for="todo-description">Todo Description:</label>
                     <textarea name="todo-description" id="todo-description" rows="3" maxlength="135"></textarea>
