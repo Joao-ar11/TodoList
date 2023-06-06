@@ -33,7 +33,11 @@ const Dom = (() => {
       _projectSelectArray.splice(index, 1);
       Todo.deleteProject(name);
       Dom.reloadProjectList();
-      Dom.reloadTodoList(document.querySelector('.selected p').textContent);
+      if (_projectSelectArray.length > 0) {
+        Dom.reloadTodoList(document.querySelector('.selected p').textContent);
+      } else {
+        Dom.reloadTodoList('');
+      }
     });
     li.appendChild(button);
 
@@ -143,7 +147,7 @@ const Dom = (() => {
   }
 
   function reloadTodoList(project) {
-    document.querySelector('.current-project-name').textContent = project !== undefined ? project : '';
+    document.querySelector('.current-project-name').textContent = project;
     const todoListElement = document.querySelector('.todo-list');
     todoListElement.textContent = '';
     const todoList = Todo.getProjectNames().includes(project) ? Todo.getTodos(project) : [];
