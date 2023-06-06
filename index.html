@@ -66,7 +66,7 @@
                 <h2>New Project</h2>
                 <div class="field">
                     <label for="project-name">Project Name: </label>
-                    <input type="text" id="project-name" name="project-name" maxlength="16">
+                    <input type="text" id="project-name" name="project-name" maxlength="16" required>
                 </div>
                 <p class="error">Error! Name already in use</p>
                 <div class="form-buttons">
@@ -78,7 +78,7 @@
                 <h2>New Todo</h2>
                 <div class="field">
                     <label for="todo-name">Todo Name:</label>
-                    <input type="text" id="todo-name" maxlength="45">
+                    <input type="text" id="todo-name" maxlength="45" required>
                 </div>
                 <div class="field">
                     <label for="todo-description">Todo Description:</label>
@@ -87,11 +87,11 @@
                 <div class="field-group">
                     <div class="field">
                         <label for="todo-date">Todo Due Date:</label>
-                        <input type="date" id="todo-date" name="todo-date">
+                        <input type="date" id="todo-date" name="todo-date" required>
                     </div>
                     <div class="field">
                         <label for="todo-priority">Priority:</label>
-                        <select name="todo-priority" id="todo-priority">
+                        <select name="todo-priority" id="todo-priority" required>
                             <option value="low">Low</option>
                             <option value="medium">Medium</option>
                             <option value="high">high</option>
