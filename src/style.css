@@ -151,7 +151,7 @@ hr {
     transition: all 100ms ease-in-out;
 
     display: grid;
-    grid-template-columns: 25px 600px 100px 130px 25px;
+    grid-template-columns: 25px 600px 100px 150px 25px;
     align-items: center;
     gap: 15px;
 }
@@ -219,7 +219,10 @@ hr {
     height: 25px;
     border: none;
     background-color: #accbf0;
+    text-align: center;
+    font-size: 1rem;
     border-radius: 5px;
+    outline: none;
 
     display: flex;
     justify-content: center;
@@ -235,6 +238,9 @@ hr {
     grid-column: 3 / 6;
 }
 
+.hide {
+    display: none;
+}
 
 .modal-container {
     position: absolute;

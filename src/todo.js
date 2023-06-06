@@ -1,6 +1,14 @@
 const Todo = (() => {
   const _projects = {
-    default: [],
+    default: [
+      {
+        name: 'default',
+        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde eius totam architecto ex quas vitae animi nam, omnis eum vero cum libero earum laudantium exercitationem temporibus consectetur nobis. Laudantium, totam.',
+        dueDate: '2023-06-04',
+        priority: 'low',
+        notes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam alias tempora modi!',
+      },
+    ],
   };
 
   function createProject(name) {
