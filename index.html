@@ -15,8 +15,6 @@
         <div class="sidebar">
             <h2>Projects:</h2>
             <ul class="project-list">
-                <li class="project selected"><p>Default</p><button class="project-delete">X</button></li>
-                <li class="project"><p>Default2</p><button class="project-delete">X</button></li>
             </ul>
             <button class="new-project" type="button">+ New Project</button>
         </div>
@@ -27,21 +25,19 @@
             </div>
             <hr>
             <ul class="todo-list">
-                <li>
-                    <div class="todo">
-                        <button class="check unchecked" type="button"></button>
-                        <p class="todo-name">Default</p>
-                        <div class="priority-container">Priority: <div class="priority low" aria-label="low"></div></div>
-                        <p class="date">06/02/2023</p>
-                        <button class="todo-delete">X</button>
-                        <div class="description">
-                            <p>Description:</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde eius totam architecto ex quas vitae animi nam, omnis eum vero cum libero earum laudantium exercitationem temporibus consectetur nobis. Laudantium, totam.</p>
-                        </div>
-                        <div class="notes">
-                            <p>Notes:</p>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam alias tempora modi!</p>
-                        </div>
+                <li class="todo">
+                    <button class="check unchecked" type="button"></button>
+                    <p class="todo-name">Default</p>
+                    <div class="priority-container"><p>Priority:</p> <div class="priority low" aria-label="low"></div></div>
+                    <input class="date" readonly>
+                    <button class="todo-delete">X</button>
+                    <div class="description">
+                        <p>Description:</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde eius totam architecto ex quas vitae animi nam, omnis eum vero cum libero earum laudantium exercitationem temporibus consectetur nobis. Laudantium, totam.</p>
+                    </div>
+                    <div class="notes">
+                        <p>Notes:</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam alias tempora modi!</p>
                     </div>
                 </li>
                 <li>
@@ -84,7 +80,6 @@
                     <label for="todo-name">Todo Name:</label>
                     <input type="text" id="todo-name" maxlength="45">
                 </div>
-                <p class="error">Error! Name already in use</p>
                 <div class="field">
                     <label for="todo-description">Todo Description:</label>
                     <textarea name="todo-description" id="todo-description" rows="3" maxlength="135"></textarea>
