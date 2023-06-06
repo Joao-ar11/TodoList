@@ -90,7 +90,7 @@ const Dom = (() => {
     deleteButton.addEventListener('click', (e) => {
       e.stopPropagation();
       Todo.deleteTodo(project, index);
-      Dom.reloadTodoList();
+      Dom.reloadTodoList(project);
     });
     li.appendChild(deleteButton);
 
@@ -190,4 +190,25 @@ document.querySelector('.form-project').addEventListener('submit', (e) => {
     Dom.reloadTodoList(newName);
     Dom.closeModal();
   }
+});
+
+document.querySelector('.form-todo').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const project = document.querySelector('.current-project-name').textContent;
+  const nameInput = document.querySelector('#todo-name');
+  const name = nameInput.value;
+  const descriptionInput = document.querySelector('#todo-description');
+  const description = descriptionInput.value;
+  const dateInput = document.querySelector('#todo-date');
+  const date = dateInput.value;
+  const priority = document.querySelector('#todo-priority').value;
+  const notesInput = document.querySelector('#todo-notes');
+  const notes = notesInput.value;
+  Todo.addTodo(project, name, description, date, priority, notes);
+  nameInput.value = '';
+  descriptionInput.value = '';
+  dateInput.value = '';
+  notesInput.value = '';
+  Dom.reloadTodoList(project);
+  Dom.closeModal();
 });
